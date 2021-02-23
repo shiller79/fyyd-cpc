@@ -1,0 +1,34 @@
+10 MODE 1
+20 BORDER 0
+30 INK 0,0
+40 INK 1,9
+50 INK 2,26
+60 LOCATE 16,7
+70 PRINT "Loading..."
+80 ORIGIN 320,294
+90 DEG
+100 FOR n=1 TO 90 STEP 1.2
+110 x=SIN(n)
+120 y=COS(n)
+130 PLOT x*100,y*100,1
+140 DRAW x*(-100),y*100
+150 PLOT x*100,y*(-100)
+160 DRAW x*(-100),y*(-100)
+170 NEXT
+180 FOR n=1 TO 20
+190 PLOT -40+n,60+n,2
+200 DRAW 20+n*2,0
+210 DRAW -40+n,-60-n
+220 NEXT
+230 LOCATE 17,24
+240 PRINT "Datenbak Stand: 1985/01"
+250 WINDOW 1,40,16,23
+260 INPUT "Suche:",a$
+270 PRINT ""
+280 PRINT "Leider konnten zum Suchbegriff"
+290 PRINT "(" + a$ + ")"
+300 PRINT "keine Ergebnisse gefunden werden." 
+310 PRINT ""
+320 PRINT "Das tut uns nahezu koerperlich weh!"
+330 PRINT ""
+340 GOTO 260
